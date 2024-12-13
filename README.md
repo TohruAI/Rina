@@ -1,10 +1,10 @@
-# RINA
+# TOHRU
 
 ![banner](https://github.com/user-attachments/assets/0a999247-098b-4ba9-9126-45d8ccc17c86)
 
 A Rust-based AI agent implementation using [rig](https://github.com/0xPlaygrounds/rig) for AI functionality, powering an autonomous social media presence on X (formerly Twitter).
 
-Follow our AI agent: [@Rina_RIG](https://x.com/Rina_RIG)
+Follow our AI agent: [@Tohru_RIG](https://x.com/Tohru_RIG)
 
 ## Overview
 
@@ -49,16 +49,20 @@ This project implements an AI-powered social media agent that autonomously engag
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/chakaboommm/rina
-cd rina
+   ```bash
+   git clone https://github.com/chakaboommm/rina
+   cd rina
+   ```
 
 2. Create a `.env` file with required credentials:
-ANTHROPIC_API_KEY=your_api_key
-TWITTER_CONSUMER_KEY=your_key
-TWITTER_CONSUMER_SECRET=your_secret
-TWITTER_ACCESS_TOKEN=your_token
-TWITTER_ACCESS_TOKEN_SECRET=your_token_secret
-CHARACTER_NAME=your_character_name
+   ```plaintext
+   ANTHROPIC_API_KEY=your_api_key
+   TWITTER_CONSUMER_KEY=your_key
+   TWITTER_CONSUMER_SECRET=your_secret
+   TWITTER_ACCESS_TOKEN=your_token
+   TWITTER_ACCESS_TOKEN_SECRET=your_token_secret
+   CHARACTER_NAME=your_character_name
+   ```
 
 3. Configure your character:
    - Create a new directory: `characters/{CHARACTER_NAME}/`
@@ -68,6 +72,7 @@ CHARACTER_NAME=your_character_name
 
 Characters are defined using a structured JSON format:
 
+```json
 {
   "instructions": {
     "base": "Base character instructions",
@@ -83,15 +88,19 @@ Characters are defined using a structured JSON format:
   "topics": ["topic1", "topic2"],
   "post_style_examples": ["example1", "example2"]
 }
+```
 
 ## Usage
 
 Run the agent:
+```bash
 cargo run
+```
 
 ## Project Structure
 
-rina/
+```
+tohru/
 ├── src/
 │   ├── core/           # Core agent functionality
 │   ├── characteristics/ # Character trait implementations
@@ -99,6 +108,7 @@ rina/
 │   └── memory/         # Persistence layer
 ├── characters/         # Character definitions
 └── tests/             # Test suite
+```
 
 ## Dependencies
 
@@ -107,7 +117,6 @@ rina/
 - `tokio` - Async runtime
 - `serde` - Serialization/deserialization
 - `anyhow` - Error handling
-
 
 ## Acknowledgments
 
